@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BBB",
+    "BPP",
+    "BBB"
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:book"
+    },
+    "P": {
+      "item": "minecraft:paper"
+    }
+  },
+  "result": {
+    "item": "mysticarts:mystic_codex"
+  }
+}

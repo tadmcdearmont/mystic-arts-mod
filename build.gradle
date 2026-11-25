@@ -1,0 +1,33 @@
+plugins {
+    id 'maven-publish'
+    id 'fabric-loom' version '1.1-SNAPSHOT'
+}
+
+version = project.mod_version
+group = project.maven_group
+
+repositories {
+    mavenLocal()
+    maven {
+        url = "https://maven.fabricmc.net/"
+    }
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:1.20.1"
+    mappings "net.fabricmc:yarn:1.20.1+build.10:v2"
+    mod "net.fabricmc:fabric-loader:0.15.11"
+
+    mod "net.fabricmc.fabric-api:fabric-api:0.92.2+1.20.1"
+
+    // Testing
+    testImplementation "org.junit.jupiter:junit-jupiter:5.9.1"
+    testRuntimeOnly "org.junit.platform:junit-platform-launcher"
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(JavaLanguageVersion.Version.JAVA_17)
+
+processResources {
+    inputs.property "version", project.version
+    filter(org.apache.tools.ant.filters.ReplaceTokens, tokens: [version: project.version])
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "mysticarts",
+  "version": "1.0.0",
+  "name": "Mystic Arts Mod",
+  "description": "A spiritual successor to the Monk Mod.",
+  "authors": [
+    "Tad"
+  ],
+  "contact": {
+    "supported_urls": []
+  },
+  "license": "MIT",
+  "icon": "assets/mysticarts/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.mysticarts.MysticArtsMod"
+    ],
+    "client": [
+      "net.mysticarts.client.MysticArtsClient"
+    ]
+  },
+  "mixins": [
+    "mysticarts.mixins.json"
+  ],
+  "depends": {
+    "minecraft": "~1.20.1",
+    "fabricloader": ">=0.15.11",
+    "fabric-api": ">=0.92.2"
+  }
+}
